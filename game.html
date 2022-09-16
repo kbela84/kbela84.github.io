@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/stylex.css">
+
+
+</head>
+
+<style>
+  #canvas {
+    float: left;
+    border: 3px black solid;
+    opacity: 95%;
+  }
+  #fadecanv {
+    float: left;
+    border: 3px black solid;
+    opacity: 95%;
+  }
+</style>
+
+
+
+<body onload="">
+
+  <div>
+
+    <canvas id="canvas" width="800" height="800"></canvas>
+  </div>
+
+<div class="wrapper">
+  <div id="healthtxt"></div>
+  <div id="healthbar"></div>
+  <div id="ultibar">
+    <div id="power"></div>
+    <div id="flame"></div>
+    <div id="bartext">Press C</div>
+  </div>
+  
+  
+</div>
+<div id="shd"></div>
+
+  <div class="herostatusbar">
+    <div id="heroportrait">
+      <div id="heroname"></div>
+      <img id="heropict" src="img/herobig.png" alt="bigp">
+    </div>
+    <div id="herostats">
+      <div id="herolevel"> </div>
+      <div id="attributes">
+        <div id="herohealth"></div>
+        <div id="heromaxhealth"></div>
+        <div id="attackrating"> </div>
+        <div id="defenserating"> </div>
+        <div id="damagedone"> </div>
+        <div id="damagetaken"> </div>
+        <div id="killcount"> </div>
+        <div id="haskey"></div>
+      </div>
+    </div>
+    <div class="mobstatusbar">
+      <div id="mobportrait">
+        <div id="mobname"></div>
+        <img id="skellybig" src="img/bigskelly.png" alt="bigp">
+        <img id="minotaurbig" src="img/minotaurbig.png" alt="bigp">
+        <img id="piratebig" src="img/piratebig.png" alt="bigp">
+      </div>
+      <div id="mobstats">
+        <div id="moblevel"> </div>
+        <div id="mobattributes">
+          <div id="mobhealth"></div>
+          <div id="mobmaxhealth"></div>
+          <div id="mobattackrating"> </div>
+          <div id="mobdefenserating"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="bossstatusbar">
+      <div id="bossportrait">
+        <div id="bossname"></div>
+        <img id="bosspict" src="img/bossbig.png" alt="bigp">
+        <img id="nagabig" src="img/nagabig.png" alt="bigp">
+        <img id="skellbossp" src="img/skellboss.png" alt="bigp">
+      </div>
+      <div id="bossstats">
+        <div id="bosslevel"> </div>
+        <div id="bossattributes">
+          <div id="bosshealth"></div>
+          <div id="bossmaxhealth"></div>
+          <div id="bossattackrating"> </div>
+          <div id="bossdefenserating"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+
+
+
+
+
+
+  <div class="pix">
+    <img id=grass src="img/grass2.png" width="0" height="0" alt="lols">
+    <img id=wall src="img/wall.png" width="0" height="0" alt="lols">
+    <img id=herox src="img/herox.png" width="0" height="0" alt="lols">
+    <img id=heroxlayer src="img/heroxlayer.png" width="0" height="0"  alt="boss">
+    <img id=herorev src="img/herorev.png" width="0" height="0" alt="lol">
+    <img id=herorevlayer src="img/herorevlayer.png" width="0" height="0"  alt="boss">
+    <img id=herodead src="img/herodead.png" width="0" height="0" alt="lol">
+
+    <img id=skellbossdead src="img/skellbossdead.png" width="0" height="0" alt="lol">
+    <img id=skellking src="img/skellking.png" width="0" height="0" alt="lol">
+    <img id=piratex src="img/piratex.png" width="0" height="0" alt="lol">
+    <img id=piraterev src="img/piraterev.png" width="0" height="0" alt="lol">
+    <img id=piratedead src="img/piratedead.png" width="0" height="0" alt="lol">
+    <img id=naga src="img/naga.png" width="0" height="0" alt="lol">
+    <img id=nagadead src="img/nagadead.png" width="0" height="0" alt="lol">
+    <img id=skelly src="img/skellyx.png" width="0" height="0" alt="lol">
+    <img id=skellyrev src="img/skellyrev.png" width="0" height="0" alt="lol">
+    <img id=minotaur src="img/minotaur.png" width="0" height="0" alt="lol">
+    <img id=minotaurx src="img/minotaurx.png" width="0" height="0" alt="lol">
+    <img id=minotaurdead src="img/minotaurdead.png" width="0" height="0" alt="lol">
+    <img id=dead src="img/deadsk.png" width="0" height="0"  alt="lol">
+    <img id=boss src="img/bosser.png" width="0" height="0"  alt="lol">
+    <img id=bossdead src="img/bossdead.png" width="0" height="0"  alt="lol">
+    <img id="bigboss" src="img/bossbig.png" width="0" height="0"  alt="boss">
+    <img id="othermap" src="img/testmap.png" width="0" height="0"  alt="boss">
+    <img id="rusty" src="img/rusti.png" width="0" height="0"  alt="boss">
+    <img id="greenmap" src="img/greentil.png" width="0" height="0"  alt="boss">
+    <img id="potion" src="img/potion.png" width="0" height="0"  alt="boss">
+    <img id="pirmap" src="img/pirmap.png" width="0" height="0"  alt="boss">
+
+<!-- -----------------------------HERO ANIMATIONS--------------------- -->
+    <img id="hitnull" src="img/hitnull.png" width="0" height="0"  alt="boss">
+    <img id="hitone" src="img/hitone.png" width="0" height="0"  alt="boss">
+    <img id="hittwo" src="img/hittwo.png" width="0" height="0"  alt="boss">
+    <img id="hitthree" src="img/hitthree.png" width="0" height="0"  alt="boss">
+    <img id="hitbugged" src="img/hitbugged.png" width="0" height="0"  alt="boss">
+    <img id="hitfive" src="img/hitfive.png" width="0" height="0"  alt="boss">
+
+    <img id="punchnull" src="img/punchnull.png" width="0" height="0"  alt="boss">
+    <img id="punchone" src="img/punchone.png" width="0" height="0"  alt="boss">
+    <img id="punchtwo" src="img/punchtwo.png" width="0" height="0"  alt="boss">
+    <img id="punchthree" src="img/punchtree.png" width="0" height="0"  alt="boss">
+    <img id="punchfour" src="img/punchfour.png" width="0" height="0"  alt="boss">
+    <img id="punchfive" src="img/punchfive.png" width="0" height="0"  alt="boss">
+
+    <img id="thrownull" src="img/thrownull.png" width="0" height="0"  alt="boss">
+    <img id="throwone" src="img/throwone.png" width="0" height="0"  alt="boss">
+    <img id="throwtwo" src="img/throwtwo.png" width="0" height="0"  alt="boss">
+    <img id="throwthree" src="img/throwthree.png" width="0" height="0"  alt="boss">
+    <img id="throwfour" src="img/throwfour.png" width="0" height="0"  alt="boss">
+    <img id="throwfive" src="img/throwfive.png" width="0" height="0"  alt="boss">
+    <img id="throwsix" src="img/throwsix.png" width="0" height="0"  alt="boss">
+    <img id="throwseven" src="img/throwseven.png" width="0" height="0"  alt="boss">
+    <img id="throweight" src="img/throweight.png" width="0" height="0"  alt="boss">
+    <img id="thrownine" src="img/thrownine.png" width="0" height="0"  alt="boss">
+    <img id="throwten" src="img/throwten.png" width="0" height="0"  alt="boss">
+
+    <img id="tnull" src="img/tnull.png" width="0" height="0"  alt="boss">
+    <img id="tone" src="img/tone.png" width="0" height="0"  alt="boss">
+    <img id="ttwo" src="img/ttwo.png" width="0" height="0"  alt="boss">
+    <img id="tthree" src="img/tthree.png" width="0" height="0"  alt="boss">
+    <img id="tfour" src="img/tfour.png" width="0" height="0"  alt="boss">
+    <img id="tfive" src="img/tfive.png" width="0" height="0"  alt="boss">
+    <img id="tsix" src="img/tsix.png" width="0" height="0"  alt="boss">
+    <img id="tseven" src="img/tseven.png" width="0" height="0"  alt="boss">
+    <img id="teight" src="img/teight.png" width="0" height="0"  alt="boss">
+    <img id="tnine" src="img/tnine.png" width="0" height="0"  alt="boss">
+    <img id="tten" src="img/tten.png" width="0" height="0"  alt="boss">
+
+
+  <!-- textures -->
+    <img id="btleftc" src="img/btleftc.png" width="0" height="0"  alt="boss">
+    <img id="btrightc" src="img/btrightc.png" width="0" height="0"  alt="boss">
+    <img id="tprightc" src="img/tprightc.png" width="0" height="0"  alt="boss">
+    <img id="tpleftcc" src="img/tpleftcc.png" width="0" height="0"  alt="boss">
+    <img id="tops" src="img/tops.png" width="0" height="0"  alt="boss">
+    <img id="bottoms" src="img/bottoms.png" width="0" height="0"  alt="boss">
+    <img id="lefts" src="img/lefts.png" width="0" height="0"  alt="boss">
+    <img id="rights" src="img/rights.png" width="0" height="0"  alt="boss">
+    <img id="onlytopright" src="img/onlytopright.png" width="0" height="0"  alt="boss">
+    <img id="onlytopleft" src="img/onlytopleft.png" width="0" height="0"  alt="boss">
+    <img id="onlybtleft" src="img/onlybtleft.png" width="0" height="0"  alt="boss">
+    <img id="onlybtright" src="img/onlybtright.png" width="0" height="0"  alt="boss">
+    <img id="allcut" src="img/allcut.png" width="0" height="0"  alt="boss">
+    <img id="fricks" src="img/fricks.png" width="0" height="0"  alt="boss">
+    <img id="roundx" src="img/roundx.png" width="0" height="0"  alt="boss">
+    <img id="mountn" src="img/mountn.png" width="0" height="0"  alt="boss">
+    <img id="around" src="img/around.png" width="0" height="0"  alt="boss">
+    <img id="upster" src="img/upster.png" width="0" height="0"  alt="boss">
+    <img id="mrpic" src="img/mrpic.png" width="0" height="0"  alt="boss">
+    <img id="roar" src="img/roar.png" width="0" height="0"  alt="boss">
+    <img id="frico" src="img/frico.png" width="0" height="0"  alt="boss">
+    <img id="countless" src="img/countless.png" width="0" height="0"  alt="boss">
+    <img id="pomp" src="img/pomp.png" width="0" height="0"  alt="boss">
+    <img id="many" src="img/many.png" width="0" height="0"  alt="boss">
+    <img id="walltwo" src="img/walltwo.png" width="0" height="0"  alt="boss">
+    <img id="wallthree" src="img/wallthree.png" width="0" height="0"  alt="boss">
+    <img id="wallfour" src="img/wallfour.png" width="0" height="0"  alt="boss">
+    <img id="mokks" src="img/mokks.png" width="0" height="0"  alt="boss">
+    <img id="wlmore" src="img/wlmore.png" width="0" height="0"  alt="boss">
+    <img id="wlnope" src="img/wlnope.png" width="0" height="0"  alt="boss">
+
+  </div>
+
+  
+  <script type="module" src="heromaker.js"></script>
+  <script type="module" src="promt.js"></script>
+  <script type="module" src="pumper.js"></script>
+  <script type="module" src="classes.js"></script>
+  <script type="module" src="cssmod.js"></script>
+  
+
+</body>

@@ -1,0 +1,21 @@
+{
+  "name": "kbela84",
+  "version": "1.0.0",
+  "description": "this is a new repo# kbela84 # kbela84",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/kbela84.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/kbela84/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/kbela84#readme"
+}
