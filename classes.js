@@ -1337,8 +1337,8 @@ export function axeThrow() {
 
 
     if (heroin.charged == true && heroin.rev == false && risk == 0) {
-        // heroin.charged = false;
-        // heroin.ulti = 0;
+        heroin.charged = false;
+        heroin.ulti = 0;
         heroPower()
         clearHero()
         reMap()
@@ -1371,8 +1371,8 @@ export function axeThrow() {
 
     }
     if (heroin.charged == true && heroin.rev == true && risk == 0) {
-        // heroin.charged = false;
-        // heroin.ulti = 0;
+        heroin.charged = false;
+        heroin.ulti = 0;
         heroPower()
         clearHero()
         reMap()
