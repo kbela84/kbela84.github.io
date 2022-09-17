@@ -71,7 +71,7 @@ export function heroPower(){
     }
     if(heroin.ulti == 7){
         r.style
-        .setProperty('--ultibarx', '98%')
+        .setProperty('--ultibarx', '100%')
         r.style
         .setProperty('--bardisp', '60%')
         r.style
