@@ -13,7 +13,7 @@ import { reMap } from "./pumper.js";
 import { gigachadwallfunction } from "./pumper.js";
 import { drwMonst } from "./pumper.js";
 import { mapBackgrnd } from "./pumper.js";
-import { heroPower } from "./cssmod.js";
+import { heroPower, hpPerc } from "./cssmod.js";
 import { mapstyle } from "./pumper.js";
 
 
@@ -164,6 +164,7 @@ class Hero {
         this.health = 0;
         statusBar()
         clearHero()
+        hpPerc()
         ctx.drawImage(herodead, this.posX, this.posY, 80, 80)
         
         if (confirm("Game Over!  Press 'Ok' to Restart, and Cancel to exit")) {
