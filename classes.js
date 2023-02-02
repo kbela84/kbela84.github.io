@@ -915,7 +915,7 @@ export function mvMonsters() {
 
     for (let i = 0; i < monsterPos.length; i++) {
         if (monsterPos[i].posX - 80 == heroin.posX && monsterPos[i].posY == heroin.posY || monsterPos[i].posX + 80 == heroin.posX && monsterPos[i].posY == heroin.posY ||
-            monsterPos[i].posY - 80 == heroin.posY && monsterPos[i].posX == heroin.posX || monsterPos[i].posY + 80 == heroin.posY && monsterPos[i].posX == heroin.posX && monsterPos[i].boss == false) {
+            monsterPos[i].posY - 80 == heroin.posY && monsterPos[i].posX == heroin.posX || monsterPos[i].posY + 80 == heroin.posY && monsterPos[i].posX == heroin.posX) {
             monsterPos[i].atxHero()
         }
         if (monsterPos[i].boss == false) {
@@ -949,6 +949,10 @@ class Boss {
         this.posX = posX;
         this.posY = posY;
         this.name = name;
+    }
+
+    atxHero(){
+        
     }
 
     death() {
